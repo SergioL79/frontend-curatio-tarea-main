@@ -1,4 +1,4 @@
-import UserForm from "../../products/UserForm";
+import UserForm from "../../products/medForm";
 
 export default function CreateUserPage() {
     return (

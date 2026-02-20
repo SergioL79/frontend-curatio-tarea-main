@@ -1,7 +1,8 @@
 //Se comenta para que no entre en conflicto con el CreateUserPage, que es el que se va a mostrar en la pagina de crear usuario
 //import UserForm from "../features/users/components/UserForm";
-import CreateUserPage from "../features/users/pages/CreateUserPage";
 
+import DeleteUseEffect from "../shared/components/useEffect";
+import UserForm from "../features/products/medForm";
 export default function App() {
 
     return(
@@ -12,7 +13,10 @@ export default function App() {
 
             <div>
                 {/* <UserForm />  */}
-                <CreateUserPage/>
+                
+                <DeleteUseEffect/>
+                <UserForm/>
+            
             </div>
         </div>
     )

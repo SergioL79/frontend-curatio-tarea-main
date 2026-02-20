@@ -1,11 +1,21 @@
 import Input from "../../shared/components/Input";
+import Select from "../../shared/components/Select";
+/*import selectService from "@/features/users/services/selectService";*/
+import { useEffect, useState } from "react";
+import { getDocumentTypes } from "../users/services/selectService";
 
 export default function UserForm() {
+    const [documentTypes, setDocumentTypes] = useState([]);
+
+    useEffect(() => {
+        getDocumentTypes().then(setDocumentTypes);
+    },[]);
+
   return (
     <div>
       {/*Formulario para crear el Medicamento*/}
 
-      <form>
+      <form className="grid grid-cols-2">
         {/*DATOS BASICOS */}
         <Input
           label="Id Medicamento"
@@ -27,12 +37,17 @@ export default function UserForm() {
           name="pharmaceuticalForm"
         />
 
-        <Input
-          label="Presentacion"
-          placeholder="Caja de 20 tabletas"
-          type="text"
-          name="presentation"
-        />
+        <Select
+      
+        label="Tipo de medicamento"
+        name="medicationType"
+        options={documentTypes}>
+          
+          
+        </Select>
+        
+          
+        
 
         <Input
           label="Concentracion"
