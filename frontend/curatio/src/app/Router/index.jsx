@@ -1,11 +1,12 @@
 import {createBrowserRouter} from "react-router-dom";
-import MainLayaut from "@/shared/layouts/MainLayaut";
+import MainLayout from "@/shared/layout/MainLayout";
+
 const router = createBrowserRouter([
 
 
     {
     path: "/",
-    element: <MainLayaut />,
+    element: <MainLayout />,
     children:[
         
         {
@@ -32,30 +33,11 @@ const router = createBrowserRouter([
         path:"ventas",
         element: <h1 className="p-4">Ventas </h1>,
         },
-        
-
-
-
-
 
     ]
 
-
-
-
-
-
-    }   
-
-
-
-
-
-
-
-
+}  
 
 ])
-
 
 export default router;
