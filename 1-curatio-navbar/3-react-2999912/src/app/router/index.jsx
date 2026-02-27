@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "@/shared/layout/MainLayout";
 import ProfilePage from "../../features/users/pages/ProfilePage";
+import { Home } from "lucide-react";
+import HomePage from "../../features/home/pages/HomePage";
 
 const router = createBrowserRouter([
 
@@ -10,7 +12,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <h1 className="p-4">Inicio</h1>
+                element: <HomePage />
             },
             {
                 path:"cursos",
