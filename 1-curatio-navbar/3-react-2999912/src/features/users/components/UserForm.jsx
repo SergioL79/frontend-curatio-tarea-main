@@ -30,83 +30,85 @@ export default function UserForm(){
         }
     };
 
-    return(
-        <div>
-            {/* Formulario para crear el usuario */}
-            <form className="grid grid-cols-2 gap-6" >
+    return (
+      <div>
+        {/* Formulario para crear el usuario */}
+        <form
+          className="grid grid-cols-1 gap-4 p-10
+     bg-white/70
+     dark:bg-neutral-500/20
+        backdrop-blur-sm
+        shadow-x1
+        ring-1
+        text-text-primary
+        rounded-lg
+                    "
+        >
+          <Input
+            label="Nombre"
+            placeholder="Ingrese su nombre"
+            onChange={handleNameChange}
+          ></Input>
+          <Input
+            label="Nombre"
+            placeholder="Ingrese su nombre"
+            onChange={handleNameChange}
+          ></Input>
+          <Input
+            label="Nombre"
+            placeholder="Ingrese su nombre"
+            onChange={handleNameChange}
+          ></Input>
+          <Input
+            label="Nombre"
+            placeholder="Ingrese su nombre"
+            onChange={handleNameChange}
+          ></Input>
+          <Input
+            label="Nombre"
+            placeholder="Ingrese su nombre"
+            onChange={handleNameChange}
+          ></Input>
+          <Input
+            label="Nombre"
+            placeholder="Ingrese su nombre"
+            onChange={handleNameChange}
+          ></Input>
 
-                <Input
-                    label="Nombre"
-                    placeholder="Ingrese su nombre"
-                    onChange={handleNameChange}
-                >
-                </Input>
-                <Input
-                    label="Nombre"
-                    placeholder="Ingrese su nombre"
-                    onChange={handleNameChange}
-                >
-                </Input>
-                <Input
-                    label="Nombre"
-                    placeholder="Ingrese su nombre"
-                    onChange={handleNameChange}
-                >
-                </Input>
-                <Input
-                    label="Nombre"
-                    placeholder="Ingrese su nombre"
-                    onChange={handleNameChange}
-                >
-                </Input>
-                <Input
-                    label="Nombre"
-                    placeholder="Ingrese su nombre"
-                    onChange={handleNameChange}
-                >
-                </Input>
-                <Input
-                    label="Nombre"
-                    placeholder="Ingrese su nombre"
-                    onChange={handleNameChange}
-                >
-                </Input>
+          <Input
+            label="Email"
+            placeholder="Ingrese su nombre"
+            onBlur={handleEmailBlur}
+          ></Input>
 
-                <Input
-                    label="Email"
-                    placeholder="Ingrese su nombre"
-                    onBlur={handleEmailBlur}
-                >
-                </Input>
+          <Select
+            label="Tipos de documento"
+            name="documentType"
+            options={documentTypes}
+          ></Select>
 
-                <Select
-                    label="Tipos de documento"   
-                    name="documentType"
-                    options={documentTypes}                 
-                >
-                </Select>
+          {/* Actions */}
+          <div className="flex items-center justify-center gap-12">
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={() => console.log("Oprimió cancelar")}
+            >
+              Cancelar
+            </Button>
 
-                {/* Actions */}
-                <div className="flex items-center justify-center gap-12">
-                    <Button
-                    variant = "secondary"
-                    size = "sm"
-                    onClick={() => console.log("Oprimió cancelar")}>
-                        Cancelar
-                    </Button>
-                    
-                    <Button
-                    variant = "primary"
-                    size = "md"
-                    type = "submit"
-                    onClick={() => console.log("Oprimió guardar")}>
-                        Guardar
-                    </Button>                    
-                </div>
-            </form>
-        </div>
-
-    )
+            <Button
+              variant="primary"
+              size="md"
+              type="submit"
+              onClick={() => console.log("Oprimió guardar")}
+            >
+              Guardar
+            </Button>
+          </div>
+        </form>
+      </div>
+    );
 }
 
 

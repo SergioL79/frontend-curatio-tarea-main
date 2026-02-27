@@ -6,17 +6,15 @@ const Navbar = ({variant ="solid"}) => {
 
     const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className ={`w-full border-b transition-colors duration-300 ${  
-      variant === "transparent" 
-      ? "bg-transparent border-transparent absolute top-0 left-0 z-30"
-      : "bg-background border-border"
-    }`}>
-
-
-
+    <nav
+      className={`w-full border-b transition-colors duration-300 ${
+        variant === "transparent"
+          ? "bg-transparent border-transparent absolute top-0 left-0 z-30"
+          : "bg-background border-border"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
-          
           {/* Logo de marca */}
           <div className="flex items-center">
             <Link to="/" className="text-xl font-bold">
@@ -50,11 +48,10 @@ const Navbar = ({variant ="solid"}) => {
 
           {/* Sección derecha: búsqueda + usuario */}
           <div className="flex items-center gap-4">
-            
             {/* Buscador */}
             <div className="relative hidden sm:block">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-red-300" />
-            
+
               <input
                 type="text"
                 placeholder="Buscar..."
@@ -67,7 +64,7 @@ const Navbar = ({variant ="solid"}) => {
             {/* <button className="flex items-center justify-center size-10 rounded-full border hover:bg-gray-100 transition">
               <User className="size-5" />
             </button> */}
-            
+
             {/* Usuario */}
             <div className="relative">
               <button
@@ -77,13 +74,20 @@ const Navbar = ({variant ="solid"}) => {
                 <User className="size-5" />
               </button>
 
-
               {isOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-lg border bg-background shadow-lg">
+                <div
+                  className="absolute right-0 mt-2 w-48  bg-white/70
+     dark:bg-neutral-500/20
+        backdrop-blur-sm
+        shadow-x1
+        ring-1
+        text-text-primary
+        rounded-lg "
+                >
                   <ul className="py-2 text-sm">
                     <li>
                       <Link
-                        to="/perfil"
+                        to="/login"
                         className="block px-4 py-2 hover:bg-surface transition"
                         onClick={() => setIsOpen(false)}
                       >
@@ -105,8 +109,6 @@ const Navbar = ({variant ="solid"}) => {
                 </div>
               )}
             </div>
-
-
           </div>
         </div>
       </div>
