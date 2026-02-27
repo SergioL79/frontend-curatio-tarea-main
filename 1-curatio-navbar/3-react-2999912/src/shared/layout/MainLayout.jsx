@@ -9,9 +9,13 @@ export default function MainLayout(){
       className="relative min-h-screen bg-cover bg-center" 
       style={{ backgroundImage: `url(${heroBg})` }}
     >
+
+      {/*filtro*/}
+
+      <div className="absolute inset-0 -z-10 bg-black/40"></div>
       {/* Navbar */}
-      <header className="-z-20">
-        <Navbar />;
+      <header className="relative z-20">
+        <Navbar variant="transparent" />
       </header>
       
 
