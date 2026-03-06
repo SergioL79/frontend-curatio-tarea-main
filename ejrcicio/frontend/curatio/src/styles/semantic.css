@@ -1,0 +1,62 @@
+
+/*Son roles de la interfaz*/
+
+:root {
+
+    /*=========BRAND=============*/
+
+    --semantic-brand: var(--color-primary-400);
+    --semantic-brand-hover: var(--color-primary-900); /*Generalmente es de un tono mas alto que el brand*/
+    --semantic-brand-soft: var(--color-primary-300);
+    
+
+
+     /*=========BACKGROUND=============*/
+
+     --semantic-background : var(--color-gray-600); /*Fondo principal estructural*/
+     /*lo que está por encima del fondo se llama surface, ejemplo los menus desplegables*/
+     --semantic-surface: var(--color-white); /*fondo de modales, cards, containers*/
+     --semantic-surface-muted: var(--color-gray-200); /*Zonas diferencias o secundarias con menos importancia*/
+
+
+     /*========TEXT============*/
+
+     --semantic-text-primary: var(--color-black); /*Color principal de lectura, titulos, texto base del documento*/
+     --semantic-text-secondary: var(--color-gray-500); /* textos menos dominantes*/
+     --semantic-text-muted: var(--color-gray-400); /*texto muteado, aun no está activa la accion. texto deshabilitado*/
+     --semantic-text-inverse: var(--color-white); /*Color invertido  para el color principal del texto*/
+     --semantic-text-label: var(--color-black); 
+     --font-body: var(--font-roboto);
+     --font-text-secondary: var(--font-text-secondary);
+     --font-label-weight: var(--font-weight-medium);
+     --font-heading-weight: var(--font-weight-bold);
+   
+
+    /*==========BORDER======================*/
+
+    /* --color-border: var(--color-secundary-600); /*Borde principal de todos los componentes*/
+    /* --color-border-strong: var(--color-gray-400); Bordes más fuertes */
+    --semantic-warning: var(--color-yellow-300); /*alertas*/
+
+    --semantic-border: var(--color-green-500);/*Borde principal*/
+    --semantic-border-strong: var(--color-black);/*Bordes mas fuertes, */
+
+    /*STATE*/
+
+    --fs-size-small: var(--fs-xxxs);
+    --fs-size-med: var(--fs-xxxs-med); /*12px*/
+    --fs-size-mostsmall: var(--fs-xxxxs); /*8px*/
+
+
+    /*==========================================*/
+    /*Ya no dependemos de nombres de color ,
+     dependemos es de intención */
+    /*==========================================*/
+
+
+    
+
+
+     
+
+}
